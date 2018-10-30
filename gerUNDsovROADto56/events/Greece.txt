@@ -1,0 +1,611 @@
+﻿###########################
+# Greek Events
+###########################
+
+add_namespace = greece
+
+# Byzantium
+country_event = {
+
+	id = greece.5
+	title = "Восстановление Византиниума"
+	desc = "Греция, запугивая армией, потребовала от Турции Станбул и сменила название на Византиниум, превратив в свою столицу."
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 1
+		}
+
+		name = "Перенести столицу"
+		GRE = { transfer_state = 341 }
+		add_state_core = 341
+		341 = { set_state_name = "Constantinople" }
+		set_province_name = { id = 9833 name = "Byzantium" }
+		set_capital = 341
+	}
+	option = {
+		ai_chance = {
+			base = 1
+		}
+
+		name = "Не переносить столицу"
+		GRE = { transfer_state = 341 }
+		add_state_core = 341
+		341 = { set_state_name = "Constantinople" }
+		set_province_name = { id = 9833 name = "Byzantium" }
+	}
+}
+
+# Demand Istanbul
+country_event = {
+
+	id = greece.6
+	title = "Греция требует Стамбул"
+	desc = "Греция стала достаточно сильной, чтобы потребовать от Турции потерянных крупных городов. Они рассматривают возможность изменения названий."
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 1
+		}
+
+		name = "Изменить название"
+		GRE = { transfer_state = 341 }
+		add_state_core = 341
+		341 = { set_state_name = "Constantinople" }
+		set_province_name = { id = 9833 name = "Constantinople" }
+	}
+	option = {
+		ai_chance = {
+			base = 1
+		}
+
+		name = "Не менять название"
+		GRE = { transfer_state = 341 }
+		add_state_core = 341
+		
+	}
+}
+
+# Reclaimation Cyprus
+country_event = {
+
+	id = greece.7
+	title = "Греция претендует на Кипр"
+	desc = "Греция стала достаточно сильной, чтобы требовать Кипр у Британцев. Они обсуждают вопрос о том, предъявить претензии на него или полностью оккупировать."
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 0
+		}
+
+		name = "Аннексировать Кипр"
+		GRE = { transfer_state = 183 }
+		add_state_core = 183
+		ENG = {create_wargoal = { type = annex_everything target = GRE }}
+	}
+	option = {
+		ai_chance = {
+			base = 1
+		}
+
+		name = "Только претензия"
+		add_state_core = 183
+		
+		
+	}
+}
+
+# War Efforts Cyprus
+country_event = {
+
+	id = greece.8
+	title = "Кипр за военные усилия"
+	desc = "В обмен на усилия Греции в войне против Третьей Германской Империи, Соединенное Королевство решило вернуть Кипра грекам."
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 0
+		}
+
+		name = "Замечательно"
+		GRE = { transfer_state = 183 }
+		add_state_core = 183
+	}
+}
+
+# Join Axis
+country_event = {
+
+	id = greece.9
+	title = "Греция присоединяется к Оси"
+	desc = "Греция решила встать на сторону Германии в этой войне. Что же из этого выйдет?!"
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 0
+		}
+
+		name = "Начать военный альянс"
+		GER = { add_to_faction = GRE }
+	}
+}
+
+# Join Comintern
+country_event = {
+
+	id = greece.10
+	title = "Греция вступает в Коминтерн"
+	desc = "Греция решила встать на сторону СССР в этой войне. Что же из этого выйдет?!"
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 0
+		}
+
+		name = "Начать военный альянс"
+		SOV = { add_to_faction = GRE }
+	}
+}
+
+# Join Allies
+country_event = {
+
+	id = greece.11
+	title = "Греция присоединяется к Союзникам"
+	desc = "Греция решила встать на сторону Британии в этой войне. Что же из этого выйдет?!"
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 0
+		}
+
+		name = "Начать военный альянс"
+		ENG = { add_to_faction = GRE }
+	}
+}
+
+# Industrialise Islands
+country_event = {
+
+	id = greece.12
+	title = "Индустриализация островов"
+	desc = "Греческое правительство решило перенести промышленность на свои острова, чтобы обезопасить заводы от вторжения."
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 0
+		}
+
+		name = "Хорошо"
+		182 = { 
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes		
+			}
+		}
+		187 = { 
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes		
+			}
+		}
+	}
+}
+
+# Take from Romania
+country_event = {
+
+	id = greece.13
+	title = "Требовать земли у Румынии"
+	desc = "После захвата Бессарабии Советами у Румынии, мы чувствуем, что мы должны тоже взять наши землю, пока Румыния ослаблена."
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 0
+		}
+
+		name = "МОЁ!"
+		GRE = { transfer_state = 77 }
+	}
+}
+
+# Support Britain
+country_event = {
+
+	id = greece.14
+	title = "Поддержка Британии"
+	desc = "Не смотря на то, что Греция оффициально не состоит в Союзниках, она хоть как-то хочет помочь Британии в ёё войне против Германии."
+	picture = GFX_report_event_german_speech
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 0
+		}
+
+		name = "Отправить помощь"
+		send_equipment = { target = ENG type = infantry_equipment amount = 500 } 
+		ENG = {
+				add_opinion_modifier = { 
+						target = GRE
+						modifier = small_increase
+					}
+				}
+			}
+}
+
+
+
+		
+		
+
+# Soviet Demands
+country_event = {
+	id = greece.1
+	title = greece.1.t
+	desc = greece.1.d
+	picture = GFX_report_event_stalin_02
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = greece.1.a
+		ai_chance = {	
+			modifier = {
+				factor = 0
+				OR = {
+					any_other_country = {
+
+						has_guaranteed = GRE
+					}
+					any_other_country = {
+
+						is_in_faction_with = GRE
+					}
+				}
+			}
+			factor = 100	
+		}
+
+		SOV = { transfer_state = 187 }
+		if = {
+			limit = {
+				BUL = { 
+					OR = { 
+						is_in_faction_with = SOV 
+						is_in_faction = no
+					}
+				}
+			}
+			BUL = { 
+				transfer_state = 184
+				add_opinion_modifier = { target = SOV modifier = SOV_ultimatum_to_greece_thrace }
+			}
+		}
+		hidden_effect = {
+			news_event = { id = news.197 }
+		}
+	}
+	option = { # Refuse
+		name = greece.1.b
+		ai_chance = {	
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						any_other_country = {
+
+							has_guaranteed = GRE
+						}
+						any_other_country = {
+
+							is_in_faction_with = GRE
+						}
+					}
+				}
+			}
+			factor = 5	
+		}
+		hidden_effect = {
+			news_event = { id = news.198 hours = 6 }
+		}
+	}
+}
+
+# German demands to hand over territory to friends or self
+country_event = {
+	id = greece.2
+	title = greece.2.t
+
+	desc = { 
+		text = greece.2.d_GER_demand
+		trigger = {
+			OR = {
+				713 = { has_state_flag = GER_second_ljubljana_award_GER_demand }
+				185 = { has_state_flag = GER_second_ljubljana_award_GER_demand }
+				47 = { has_state_flag = GER_second_ljubljana_award_GER_demand }
+			}
+		}
+	}
+
+	desc = {
+		text = greece.2.d_ITA
+		trigger = {
+			OR = {
+				has_global_flag = GER_second_ljubljana_award_ITA_185
+				has_global_flag = GER_second_ljubljana_award_ITA_186
+				has_global_flag = GER_second_ljubljana_award_ITA_47
+			}
+			NOT = { has_global_flag = GER_second_ljubljana_award_BUL_184 }
+		}
+	}
+	
+	desc = {
+		text = greece.2.d_BUL
+		trigger = {
+			NOT = { has_global_flag = GER_second_ljubljana_award_ITA_185 }
+			NOT = { has_global_flag = GER_second_ljubljana_award_ITA_186 }
+			NOT = { has_global_flag = GER_second_ljubljana_award_ITA_47 }
+			has_global_flag = GER_second_ljubljana_award_BUL_184
+		}
+	}
+
+	desc = {
+		text = greece.2.d_ITA_BUL
+		trigger = {
+			OR = {
+				has_global_flag = GER_second_ljubljana_award_ITA_185
+				has_global_flag = GER_second_ljubljana_award_ITA_186
+				has_global_flag = GER_second_ljubljana_award_ITA_47
+			}
+			has_global_flag = GER_second_ljubljana_award_BUL_184
+		}
+	}
+
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = greece.2.a
+		ai_chance = {	
+			modifier = {
+				factor = 0
+				OR = {
+					any_other_country = {
+
+						has_guaranteed = GRE
+					}
+					any_other_country = {
+
+						is_in_faction_with = GRE
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				is_puppet = yes
+			}
+			factor = 100	
+		}
+
+		news_event = { id = news.170 hours = 2}
+		if = {
+			limit = {
+				has_global_flag = GER_second_ljubljana_award_BUL_184
+			}
+			BUL = { transfer_state = 184 }
+		}
+
+		if = {
+			limit = {
+				has_global_flag = GER_second_ljubljana_award_ITA_185
+			}
+			ITA = { transfer_state = 185 }
+		}
+		if = {
+			limit = {
+				has_global_flag = GER_second_ljubljana_award_ITA_186
+			}
+			ITA = { transfer_state = 186 }
+		}
+		if = {
+			limit = {
+				has_global_flag = GER_second_ljubljana_award_ITA_47
+			}
+			ITA = { transfer_state = 47 }
+		}
+
+		if = {
+			limit = { 
+				has_global_flag = GER_second_ljubljana_award_GER_731
+			}
+			GER = { transfer_state = 731 }
+		}
+		if = {
+			limit = { 
+				has_global_flag = GER_second_ljubljana_award_GER_185
+				NOT = { has_global_flag = GER_second_ljubljana_award_GER_731 }
+			}
+			GER = { transfer_state = 185 }
+		}
+		if = {
+			limit = { 
+				has_global_flag = GER_second_ljubljana_award_GER_47
+				NOT = { has_global_flag = GER_second_ljubljana_award_GER_731 }
+				NOT = { has_global_flag = GER_second_ljubljana_award_GER_185 }
+			}
+			GER = { transfer_state = 47 }
+		}
+	}
+	
+	option = { # Refuse
+		name = greece.2.b
+		ai_chance = {	
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						any_other_country = {
+
+							has_guaranteed = GRE
+						}
+						any_other_country = {
+
+							is_in_faction_with = GRE
+						}
+					}
+				}
+			}
+			factor = 5	
+		}
+		GER = { country_event = { id = germany.102 hours = 6 } }
+		news_event = { id = news.171 hours = 2 }
+		effect_tooltip = {
+			GER = {
+				create_wargoal = {
+					type = annex_everything
+					target = GRE		
+				}
+			}			
+		}
+	}
+}
+
+# Germany demands Greece become puppet
+country_event = {
+	id = greece.3
+	title = greece.3.t
+	desc = greece.3.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = greece.3.a
+		ai_chance = {	
+			modifier = {
+				factor = 0
+				OR = {
+					any_other_country = {
+	
+						has_guaranteed = GRE
+					}
+					any_other_country = {
+
+						is_in_faction_with = GRE
+					}
+				}
+			}
+			factor = 100	
+		}
+		GER = { puppet = GRE }
+		hidden_effect = {
+			news_event = { id = news.172 hours = 2 }
+		}
+	}
+
+	option = { # Refuse
+		name = greece.3.b
+		ai_chance = {	
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						any_other_country = {
+
+							has_guaranteed = GRE
+						}
+						any_other_country = {
+
+							is_in_faction_with = GRE
+						}
+					}
+				}
+			}
+			factor = 5	
+		}
+		GER = { country_event = { id = germany.102 hours = 6 } }
+		effect_tooltip = {
+			GER = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = GRE		
+				}
+			}			
+		}
+	}
+}
+
+# Greece gets wargoal - From Italian focus tree
+country_event = {
+	id = greece.4
+	title = greece.4.t
+	desc = greece.4.d
+	picture = GFX_report_event_fascist_militia
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = greece.4.a
+		ai_chance = {	factor = 100	}
+		create_wargoal = {
+			type = take_state_focus
+			target = TUR
+			generator = { 339 }
+		}
+		
+	}
+}

@@ -1,0 +1,74 @@
+﻿#####################################################################
+#																	#
+#					 The Lion of Judah						  		#
+#																	#
+# 						BRITISH EVENTS	 							#
+#																 	#
+#####################################################################
+
+############################## ETHIOPIAN DEMANDS	    #################################
+#																						#
+#							1. Brtish Somolia									        #
+#																						#
+#########################################################################################
+
+country_event = {
+	id = britain.13371
+	title = "Британские Сомали, Абу-Даби и Аден"
+	desc = "Эфиопия требует Британские Сомали, Абу-Даби и Аден."
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		#name = ethukbs.a
+		ai_chance = { base = 10 }
+		name = "Эфиопия имеет право требовать эти земли, отдадим их, чтобы избежать очередной войны"
+		ETH = { transfer_state = 659 }
+		ETH = { transfer_state = 269 }
+		ETH = { transfer_state = 658 }
+	}
+	
+	option = {
+		#name = britain.13.b
+		ai_chance = { factor = 0 }
+		name = "Это наши земли и они не имет права их требовать. Мы должны сокрушить этих неучей"
+			create_wargoal = {
+				type = take_state_focus
+				target = ETH
+				generator = { 271 }
+			}
+	}
+}
+
+country_event = {
+	id = britain.13372
+	title = "Королевство Соломона"
+	desc = "Эфиопия требует Британские Сомали, Абу-Даби и Аден."
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		#name = ethukbs.a
+		ai_chance = { base = 10 }
+		name = "Хайле Селассие истинный король Соломонского Королевства"
+		ETH = { transfer_state = 659 }
+		ETH = { transfer_state = 269 }
+		ETH = { transfer_state = 658 }
+	}
+	
+	option = {
+		#name = britain.13.b
+		ai_chance = { factor = 0 }
+		name = "Это наши земли и они не имет права их требовать. Мы должны сокрушить этих неучей"
+			create_wargoal = {
+				type = take_state_focus
+				target = ETH
+				generator = { 271 }
+			}
+	}
+}
+
+
+	

@@ -1,0 +1,11 @@
+﻿l_russian:
+ 
+ INS_fascist_party:0 "ПНИ" #inspired by right wingers from 1960s
+ INS_fascist_party_long:0 "Партия Националистов Индонезии"
+ INS_democracy_party:0 "ПСИ" #Indonesian National Party founded by Sukarno
+ INS_democracy_party_long:0 "Партия Социалистов Индонезии" 
+ INS_communist_party:0 "ПКИ" #Partai Komunis Indonesia
+ INS_communist_party_long:0 "Партия Коммунистов Индонезии"
+ INS_neutrality_party:0 "Колониальное Правительство"
+ INS_neutrality_party_long:0 "Колониальное Правительство" #made up, in reality this guy was a member of PNI 
+ 

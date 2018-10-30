@@ -1,0 +1,19 @@
+﻿l_russian:
+
+ KUR_democratic_party:0 "КДП"
+ KUR_democratic_party_long:0 "Курдистанская Демократическая Партия"
+ KUR_communism_party:0 "ДПК"
+ KUR_communism_party_long:0 "Демократическая Партия Курдистана" 
+ 
+ KUR_fascism:0 "Курдское Государство"
+ KUR_fascism_DEF:0 "Курдское Государство"
+ KUR_democratic:0 "Республика Курдистан"
+ KUR_democratic_DEF:0 "Республика Курдистан"
+ KUR_neutrality:0 "Королевство Курдистан"
+ KUR_neutrality_DEF:0 "Королевство Курдистан"
+ KUR_communism:0 "Курдская Народная Республика"
+ KUR_communism_DEF:0 "Курдская Народная Республика"
+ KUR_fascism_ADJ:0 "Курдск."
+ KUR_democratic_ADJ:0 "Курдск."
+ KUR_neutrality_ADJ:0 "Курдск."
+ KUR_communism_ADJ:0 "Курдск."

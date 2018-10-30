@@ -1,0 +1,990 @@
+﻿###########################
+# Chilean Events
+###########################
+
+add_namespace = chile
+
+###Radical Front win election
+country_event = {
+	id = chile.1
+	title = "Радикалы побеждают на выборах"
+	desc = "Радикальная партия на выборах победила либералов. Пришло время для социал-демократии править Чили."
+	picture = GFX_report_event_generic_read_write
+	
+	trigger = {
+		tag = CHL
+		democratic > 0.5
+		date > 1938.10.24
+		date < 1940.1.24
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "Триумф Свободы!"
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+			
+		}
+	}
+}
+
+country_event = {
+	id = chile.2
+	title = "Либералы побеждают на выборах"
+	desc = "Либералы сохранили свое большинство и выиграли выборы. Однако Алессандри ушел на пенсию и был выбран новый президент."
+	picture = GFX_report_event_generic_read_write
+	
+	trigger = {
+		tag = CHL
+		neutrality > 0.5
+		date > 1938.10.24
+		date < 1940.1.24
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "Статус-кво"
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Gustavo Ross"
+			desc = "POLITICS_GUSTAVO_ROSS_DESC"
+			picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_2.dds"
+			expire = "1965.1.1"
+			ideology = centrism
+			traits = {
+				#
+			}
+		}
+	}
+}
+
+country_event = {
+	id = chile.301
+	title = "Радикалы побеждают на выборах" ###from liberals
+	desc = "Радикальная партия победила на выборах большинством. Давайте посмотрим, что теперь будет."
+	picture = GFX_report_event_generic_read_write
+	
+	trigger = {
+		tag = CHL
+		has_government = neutrality
+		democratic > 0.5
+		date > 1942.10.24
+		date < 1943.1.24
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "Смена правительства"
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Juan Antonio Ríos Morales"
+			desc = "POLITICS_ANTONIA_RIOS_MORALES_DESC"
+			picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_3.dds"
+			expire = "1965.1.1"
+			ideology = socialism
+			traits = {
+				#
+			}
+		}
+	}
+}
+
+country_event = {
+	id = chile.401
+	title = "Либералы побеждают на выборах" ###status quo
+	desc = "Либералы сохранили свое большинство и выиграли выборы."
+	picture = GFX_report_event_generic_read_write
+	
+	trigger = {
+		tag = CHL
+		has_government = neutrality
+		neutrality > 0.5
+		date > 1942.10.24
+		date < 1943.1.24
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "Статус-кво"
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Gustavo Ross"
+			desc = "POLITICS_GUSTAVO_ROSS_DESC"
+			picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_2.dds"
+			expire = "1965.1.1"
+			ideology = centrism
+			traits = {
+				#
+			}
+		}
+	}
+}
+
+country_event = {
+	id = chile.302
+	title = "Радикалы побеждают на выборах" ###status quo
+	desc = "Как и ожидалось, радикальная партия выиграла выборы большинством голосов и продолжит свой путь"
+	picture = GFX_report_event_generic_read_write
+	
+	trigger = {
+		tag = CHL
+		has_government = democracy
+		democratic > 0.5
+		date > 1942.10.24
+		date < 1943.1.24
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "Посмотрим, куда он ведет"
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Juan Antonio Ríos Morales"
+			desc = "POLITICS__JUAN_MORALES_DESC"
+			picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_3.dds"
+			expire = "1965.1.1"
+			ideology = socialism
+			traits = {
+				#
+			}
+		}
+	}
+}
+
+country_event = {
+	id = chile.403
+	title = "Либералы побеждают на выборах" ###from radicals
+	desc = "В удивительном повороте событий либералы отбили правительство. Будет интересно посмотреть, смогут ли они поддерживать такое положение дел."
+	picture = GFX_report_event_generic_read_write
+	
+	trigger = {
+		tag = CHL
+		has_government = democracy
+		neutrality > 0.5
+		date > 1942.10.24
+		date < 1943.1.24
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "Действительно интересно"
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = yes
+			
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Gustavo Ross"
+			desc = "POLITICS_GUSTAVO_ROSS_DESC"
+			picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_2.dds"
+			expire = "1965.1.1"
+			ideology = centrism
+			traits = {
+				#
+			}
+		}
+	}
+}
+
+country_event = {
+	id = chile.5
+	title = "Чили желает присоединиться к Союзникам"
+	desc = "Народ Чили желает присоединиться к Союзникам, в защиту демократии во всем мире. Их энтузиазм заслуживает похвалы, хотя их сила сомнительна."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Приветствуем их"
+		add_to_faction = CHL
+		CHL = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ENG"
+				value = 200
+			}
+		}
+		CHL = { country_event = { id = chile.6 } }
+	}
+	
+	option = {
+		name = "Кого заботит эта далекая страна?"
+		ai_chance = { factor = 0 }
+		CHL = { 
+			add_opinion_modifier = {
+				target = ENG
+				modifier = FRA_go_with_britain_reject
+			}
+		CHL = {	country_event = { id = chile.7 } }
+		}
+	}
+}
+
+country_event = {
+	id = chile.6
+	title = "Британия соглашается!"
+	desc = "Британия приняла нашу просьбу о присоединение к Союзникам. Вместе мы выступим против фашистской и коммунистической угрозы."
+	picture = GFX_report_event_sign_treaty2
+
+	is_triggered_only	= yes
+
+	option = {
+		name = "Huzzah!"
+	}
+}
+
+country_event = {
+	id = chile.7
+	title = "Британия отказывается"
+	desc = "Немыслимо! Проклятые англичане отказались от нашей просьбы присоединиться к их союзу. Нам придется стоять в одиночестве против тьмы."
+	picture = GFX_report_event_chamberlain
+
+	is_triggered_only	= yes
+
+	option = {
+		name = "Они проиграют"
+	}
+}
+
+country_event = {
+	id = chile.8
+	title = "Южноамериканский Союз"
+	desc = "Чилийцы пришли к нам с интересным предложением: формальным союзом. Это, безусловно, обеспечит прочный мир в регионе и обеспечит нашу власть на континенте. Однако действительно ли Аргентина хочет объединиться с чилийцами?"
+	picture = GFX_report_event_chamberlain
+
+	is_triggered_only	= yes
+
+	option = {
+		name = "Конечно, давайте официально оформим нашу дружбу"
+		CHL = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ARG"
+				value = 200
+			}
+		}
+		ARG = {
+			add_ai_strategy = {
+				type = alliance
+				id = "CHL"
+				value = 200
+			}
+		}
+		CHL = { country_event = { id = chile.9 } }
+	}
+	option = {
+		ai_chance = { factor = 0 }
+		name = "Аргентина не желает союза"
+		CHL = { country_event = { id = chile.10 } }
+	}
+}
+
+country_event = {
+	id = chile.9
+	title = "Наш Союз готов!"
+	desc = "Это начало больших событий для Южной Америки."
+	picture = GFX_report_event_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Ура!"
+		add_to_faction = ARG
+	}
+}
+
+country_event = {
+	id = chile.10
+	title = "Аргентинцы отвергают Союз"
+	desc = "Возможно, наша дипломатия должна принять более горький тон."
+	picture = GFX_report_event_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Мы посмотрим, что будет с ними."
+	}
+}
+
+country_event = {
+	id = chile.11
+	title = "Южноамериканский Союз"
+	desc = "Чилийцы и аргентинцы пришли к нам с интересным предложением: формальным союзом. Это, безусловно, обеспечит прочный мир в регионе и обеспечит нашу власть на континенте. Однако, согласны ли мы с ними?"
+	picture = GFX_report_event_chamberlain
+
+	is_triggered_only	= yes
+
+	option = {
+		name = "Конечно, давайте объединим наших братьев"
+		FROM = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ROOT"
+				value = 200
+			}
+		}
+		ROOT = {
+			add_ai_strategy = {
+				type = alliance
+				id = "FROM"
+				value = 200
+			}
+		}
+		CHL = { country_event = { id = chile.12 } }
+		ROOT = {
+				add_opinion_modifier = { target = FROM modifier = chile_relations_bonus }
+			}
+		FROM = {
+				add_opinion_modifier = { target = ROOT modifier = chile_relations_bonus }
+			}
+	}
+	option = {
+		ai_chance = { factor = 0 }
+		name = "Мы будем полагаться на самих себя"
+		CHL = { country_event = { id = chile.13 } }
+	}
+}
+
+country_event = {
+	id = chile.12
+	title = "Наш альянс растет"
+	desc = "Это начало больших событий для Южной Америки."
+	picture = GFX_report_event_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Ура!"
+		add_to_faction = FROM
+	}
+}
+
+country_event = {
+	id = chile.13
+	title = "Отказ"
+	desc = "Возможно, наша дипломатия должна принять более горький тон."
+	picture = GFX_report_event_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Мы посмотрим, что будет с ними"
+	}
+}
+
+country_event = {
+	id = chile.14
+	title = "Латинский Коммунистический Союз"
+	desc = "Чилийцы предложили нам распространять революцию вместе, как братья по оружию. Конечно, интересное предложение, но действительно ли они коммунисты, как утверждают или являются просто претендентами?"
+	picture = GFX_report_event_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Конечно, давайте объединим наших братьев"
+		CHL = {
+			add_ai_strategy = {
+				type = alliance
+				id = "PAR"
+				value = 200
+			}
+		}
+		PAR = {
+			add_ai_strategy = {
+				type = alliance
+				id = "CHL"
+				value = 200
+			}
+		}
+		CHL = { country_event = { id = chile.17 } }
+	}
+	option = {
+		ai_chance = { factor = 0 }
+		name = "Мы будем полагаться на самих себя"
+		CHL = { country_event = { id = chile.13 } }
+	}
+}
+
+country_event = {
+	id = chile.15
+	title = "Революция преуспевает!"
+	desc = "Наша революция преуспела! Мы должны поблагодарить чилийцев за их помощь в наших усилиях"
+	picture = GFX_report_event_chamberlain
+	
+	trigger = {
+		has_idea = CHL_communist_influence
+		has_government = communism
+		has_country_flag = CHL_revolutionary_encouragement
+			NOT = {  has_country_flag = CHL_revolution_opinion_flag }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "Мы очень благодарны"
+		set_country_flag = CHL_revolution_opinion_flag
+		CHL = { 
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = CHL_revolution_spread
+			}
+		CHL = {	country_event = { id = chile.16 } }
+		}
+	}
+}
+
+country_event = {
+	id = chile.16
+	title = "Революция распространяется в Латинской Америке!!"
+	desc = "Революция распространилась по всей Латинской Америке! Они очень благодарны за помощь, которую мы оказали в их усилиях."
+	picture = GFX_report_event_chamberlain
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Хорошо"
+		FROM = { 
+			add_opinion_modifier = {
+				target = CHL
+				modifier = CHL_revolution_spread
+			}
+		}
+	}
+}
+
+country_event = {
+	id = chile.17
+	title = "Начало Международного Альянса"
+	desc = "Это начало великих дел."
+	picture = GFX_report_event_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Ура!"
+		add_to_faction = FROM
+	}
+}
+
+country_event = {
+	id = chile.18
+	title = "Революция преуспевает!"
+	desc = "Наша революция преуспела! Мы должны поблагодарить чилийцев за их помощь в наших усилиях"
+	picture = GFX_report_event_chamberlain
+	
+	trigger = {
+		has_idea = CHL_communist_influence
+		NOT = { has_government = communism }
+			NOT = {  has_country_flag = CHL_revolution_opinion_flag }
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	hidden = yes
+	option = {
+		set_country_flag = CHL_revolutionary_encouragement
+	}
+}
+
+country_event = {
+	id = chile.19
+	title = "Чилийские призывы о помощи"
+	desc = "Чилийцы, недавно создавшие коммунистическую страну, пришли к нам с просьбой о помощи. Запрос о том, чтобы мы отправили им советников, чтобы помочь им в установлении их нового режима. Это будет стоить нам небольшого количества капитала, но это может стать ключом к распространению коммунизма в Южную Америку."
+	picture = GFX_report_event_chamberlain
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Мы пришлем им помощь"
+		add_political_power = -25
+		CHL = {
+				country_event = chile.20
+			}
+		add_opinion_modifier = {
+			target = CHL
+			modifier = CHL_advisors
+		}
+	}
+	option = {
+		name = "Советский Союз имеет более насущные проблемы."
+		CHL = {
+				country_event = chile.21
+			}
+	}
+}
+
+country_event = {
+	id = chile.20
+	title = "Советская помощь"
+	desc = "Замечательные новости, Советы согласились помочь нам создать наше правительство!"
+	picture = GFX_report_event_chamberlain
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Во имя Революции!"
+		add_ideas = CHL_soviet_assistance
+		add_opinion_modifier = {
+			target = SOV
+			modifier = CHL_advisors
+		}
+	}
+}
+
+country_event = {
+	id = chile.21
+	title = "Советы отказываются"
+	desc = "Советы отказались помояь нам."
+	picture = GFX_report_event_chamberlain
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Тогда мы создадим свой собственный путь"
+	}
+}
+
+country_event = {
+	id = chile.22
+	title = "Чили запрашивает советников"
+	desc = "Народ Чили просит отправить им советника. Их недавний национал-социалистический режим достаточно тесно связан с нами и в наших интересах найти союзника в этом регионе."
+	picture = GFX_report_event_chamberlain
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Мы отправим им помощь."
+		CHL = {
+				country_event = chile.23
+			}
+		add_opinion_modifier = {
+			target = CHL
+			modifier = CHL_advisors
+		}
+	}
+	option = {
+		name = "В Германииесть более важные вопросы"
+		CHL = {
+				country_event = chile.24
+			}
+	}
+}
+
+country_event = {
+	id = chile.23
+	title = "Немецкие советники прибывают"
+	desc = "Замечательные новости, советники из Германии недавно прибыли!"
+	picture = GFX_report_event_chamberlain
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Мы многому научимся у них"
+		add_ideas = CHL_german_assistance
+		add_opinion_modifier = {
+			target = GER
+			modifier = CHL_advisors
+		}
+	}
+}
+
+country_event = {
+	id = chile.24
+	title = "Германия отказывается"
+	desc = "Немцы отказались отправить советников."
+	picture = GFX_report_event_chamberlain
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Тогда мы построим свой собственный путь."
+	}
+}
+
+country_event = {
+	id = chile.25
+	title = "Соглашение с Чили"
+	desc = "Чилийцы пришли к нам с предложением - разделить контроль над Тихим океаном между нами. Они должны контролировать Южную и Юго-Восточную часть Тихого океана, а мы контролируем Запад и Север. Чили когда-то была значительной военно-морской державой и может оказаться выгодным союзником."
+	picture = GFX_report_event_chamberlain
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Океан достаточно большой для нас обоих - мы подпишем соглашение."
+		CHL = {
+				country_event = chile.26
+			}
+		add_opinion_modifier = {
+			target = CHL
+			modifier = CHL_pacific_accord
+		}
+	}
+	option = {
+		name = "Чили давно исчезла из актуальности. Мы не заботимся о их мнениях в Тихом океане."
+		CHL = {
+				country_event = chile.27
+			}
+		add_opinion_modifier = {
+			target = CHL
+			modifier = CHL_pacific_accord_no
+		}
+	}
+}
+
+country_event = {
+	id = chile.26
+	title = "Япония подписывает соглашение"
+	desc = "Отлично, Япония согласилась на раздел Тихого океана с нами."
+	picture = GFX_report_event_chamberlain
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Начало новой дружбы"
+		add_opinion_modifier = {
+			target = JAP
+			modifier = CHL_pacific_accord
+		}
+	}
+}
+
+country_event = {
+	id = chile.27
+	title = "Япония отказывается"
+	desc = "Японцы отказались подписывать наше соглашение, заявляя об оскорблении, что их флот сравнивают с нашими!"
+	picture = GFX_report_event_chamberlain
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Мы им еще покажем."
+		add_opinion_modifier = {
+			target = JAP
+			modifier = CHL_pacific_accord_no
+		}
+	}
+}
+
+country_event = {
+	id = chile.28
+	title = "Чили объявляет антиамериканскую политику"
+	desc = "Народ Чили, которая недавно опустился до диктатуры, объявил антиамериканскую позицию. Они исключили наших дипломатов и закрыл доступ нашей политике."
+	picture = GFX_report_event_chamberlain
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Они не выдержат"
+		add_opinion_modifier = {
+			target = CHL
+			modifier = CHL_anti_americanism
+		}
+	}
+}
+
+country_event = {
+	id = chile.29
+	title = "Путч перонистов"
+	desc = "Перонисты предприняли попытку путча! Их первое нападение на правительство было отбито и теперь они угрожают открытой войной по всей стране! По-видимому, чилийские агенты помогли организовать попытку"
+	picture = GFX_report_event_chamberlain
+	
+	is_triggered_only = yes
+	
+	option = { # Support Peronists
+		name = "Поддержать перонистов"
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			set_capital = 508
+			start_civil_war = {
+				ruling_party = fascism
+				ideology = neutrality
+				size = 0.5
+				capital = 278
+				states = { 278 512 }
+			}
+			
+			add_popularity = {
+				ideology = fascism
+				popularity = 1
+			}
+		}
+	}
+	option = { # Support Republicans
+		name = "Противостоять перонистам"
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			start_civil_war = {
+				ideology = fascism
+				size = 0.5
+				capital = 508
+				states = { 508 511 509 510 }
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.8
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -1
+			}	
+	
+		}
+	}
+	
+	option = { # Support Republicans
+		name = "Мы не можем начать гражданскую войну. Мы немедленно капитулируем."
+		ai_chance = {
+			factor = 0
+		}
+		set_politics = {
+			ruling_party = fascism
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.5
+		}
+	}
+}
+
+country_event = {
+	id = chile.30
+	title = "Перонизм удался!"
+	desc = "Перонизм восторжествовал в Аргентине в немалой степени благодаря поддержке чилийцев. Мы должны поблагодарить их."
+	picture = GFX_report_event_chamberlain
+	
+	trigger = {
+		has_idea = CHL_peronist_support
+		has_government = fascism
+		has_war = no
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "Мы очень благодарны."
+		add_opinion_modifier = {
+			target = CHL
+			modifier = CHL_supported_peronism
+		}
+		CHL = {
+			country_event = chile.31
+		}
+	}
+}
+
+country_event = {
+	id = chile.31
+	title = "Перонизм удался в Аргентине!"
+	desc = "Перонизм торжествует в Аргентине и они пришли к нам с благодарностью за нашу помощь."
+	picture = GFX_report_event_chamberlain
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Это было для нас удовольствием."
+		add_opinion_modifier = {
+			target = ARG
+			modifier = CHL_supported_peronism
+		}
+	}
+}
+
+#country_event = {
+#	id = chile.32					########FASCIST FACTION CHANGE TO########
+#	title = "Южноамериканский Союз"
+#	desc = "Чилийцы и аргентинцы пришли к нам с интересным предложением: формальным союзом. Это, безусловно, обеспечит прочный мир в регионе и обеспечит нашу власть на континенте. Однако, согласны ли мы с ними?"
+#	picture = GFX_report_event_chamberlain
+#
+#	is_triggered_only	= yes
+#
+#	option = {
+#		name = "Конечно, давайте объединим наших братьев"
+#		FROM = {
+#			add_ai_strategy = {
+#				type = alliance
+#				id = "ROOT"
+#				value = 200
+#			}
+#		}
+#		ROOT = {
+#			add_ai_strategy = {
+#				type = alliance
+#				id = "FROM"
+#				value = 200
+#			}
+#		}
+#		CHL = { country_event = { id = chile.12 } }
+#	}
+#	option = {
+#		ai_chance = { factor = 0 }
+#		name = "Мы будем полагаться на самих себя"
+#		CHL = { country_event = { id = chile.13 } }
+#	}
+#}
+
+country_event = {
+	id = chile.33
+	title = "Чили предлагает вернуть Антигофасту"
+	desc = "Антигофаста была боливийской территорией до войны, когда чилийцы ее завязывали. Они пришли к выводу, что они вернут нам землю в обмен на постоянный альянс."
+	picture = GFX_report_event_chamberlain
+
+	is_triggered_only	= yes
+
+	option = {
+		name = "Замечательное предложение. Наша законная территория возвращается без кровопролития."
+		FROM = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ROOT"
+				value = 200
+			}
+		}
+		ROOT = {
+			add_ai_strategy = {
+				type = alliance
+				id = "FROM"
+				value = 200
+			}
+		}
+		CHL = { country_event = { id = chile.34 } }
+	}
+	option = {
+		ai_chance = { factor = 0 }
+		name = "Чилийцы заплатят, что забрали у нас эту землю. Мы не будем пресмыкаться перед ними, прося о ее возвращении и вместо этого вернем сами и восстановим нашу честь."
+		CHL = { country_event = { id = chile.35 } }
+	}
+}
+
+country_event = {
+	id = chile.34
+	title = "Боливийцы согласны"
+	desc = "Боливийцы согласились присоединиться к нам в обмен на Антигофасту"
+	picture = GFX_report_event_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We shall honour our deal"
+		add_to_faction = FROM
+	}
+}
+
+country_event = {
+	id = chile.35
+	title = "Боливийцы отказываются"
+	desc = "Боливийцы отказались присоединиться к нам в обмен на Антигофасту"
+	picture = GFX_report_event_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Most confusing"
+	}
+}
+
+country_event = {
+	id = chile.36
+	title = "Чили предлагает вернуть Арику"
+	desc = "Арика была перуанской территорией до войны, когда чилийцы ее захватили. Они пришли к выводу, что они вернут нам землю в обмен на постоянный альянс."
+	picture = GFX_report_event_chamberlain
+
+	is_triggered_only	= yes
+
+	option = {
+		name = "Замечательное предложение. Наша законная территория возвращается без кровопролития."
+		FROM = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ROOT"
+				value = 200
+			}
+		}
+		ROOT = {
+			add_ai_strategy = {
+				type = alliance
+				id = "FROM"
+				value = 200
+			}
+		}
+		CHL = { country_event = { id = chile.37 } }
+	}
+	option = {
+		ai_chance = { factor = 0 }
+		name = "Чилийцы заплатят, что забрали у нас эту землю. Мы не будем пресмыкаться перед ними, прося о ее возвращении и вместо этого вернем сами и восстановим нашу честь."
+		CHL = { country_event = { id = chile.38 } }
+	}
+}
+
+country_event = {
+	id = chile.37
+	title = "Перувианцы согласны"
+	desc = "Перуанцы согласились присоединиться к нам в обмен на Арику"
+	picture = GFX_report_event_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Мы будем соблюдать нашу сделку"
+		add_to_faction = FROM
+	}
+}
+
+country_event = {
+	id = chile.38
+	title = "Перувианцы отказываются"
+	desc = "Перуанцы отказались присоединиться к нам в обмен на Арику"
+	picture = GFX_report_event_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Ну что ж..."
+	}
+}

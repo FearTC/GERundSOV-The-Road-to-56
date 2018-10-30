@@ -1,0 +1,311 @@
+﻿#####################################################################
+#																	#
+#					 The Lion of Judah						  		#
+#																	#
+# 						ETHIOPIAN EVENTS 							#
+#																 	#
+#####################################################################
+
+############################## ETHIOPIAN RESOLVE EVENTS #################################
+#																						#
+#							1. German Equipment									        #
+#																						#
+#########################################################################################
+
+add_namespace = ethiopia
+
+country_event = {
+	id = ethiopia.4001
+	title = "Залежи стали"
+	desc = "Найдено большое месторождение стали."
+	picture = GFX_report_event_generic_sign_treaty
+
+	trigger = {
+		ETH = { controls_state = 678 }
+	}
+
+	fire_only_once = yes	
+	
+	mean_time_to_happen = { days = 60 }
+	
+	option = {
+		ai_chance = { base = 10 }
+		name = "Мы должны начать добычу немедленно!"
+		add_resource = {
+				type = steel
+				amount = 16
+				state = 678
+		}
+	}
+}
+
+country_event = {
+	id = ethiopia.4002
+	title = "Резиновые плантации"
+	desc = "Правительственная инициатива по улучшению сельского хозяйства улучшила урожай наших резиновых плантаций."
+	picture = GFX_report_event_generic_sign_treaty
+
+	trigger = {
+		ETH = { controls_state = 271 }
+		has_idea = ETH_lion_roar_focus_lesser
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 365 }	
+	
+	option = {
+		ai_chance = { base = 10 }
+		name = "Наша продукция станет еще лучше!"
+		add_resource = {
+				type = rubber
+				amount = 20
+				state = 271
+			}
+	}
+}
+
+country_event = {
+	id = ethiopia.4003
+	title = "Разработка нефтяных месторождений"
+	desc = "Большой (да это все что тут было на английском. МБ потом напишу от себя ответ здесь) ."
+	picture = GFX_report_event_generic_sign_treaty
+
+	trigger = {
+		ETH = { controls_state = 271 }
+		has_idea = ETH_lion_roar_focus_lesser
+	}	
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 365 }
+	
+	option = {
+		ai_chance = { base = 10 }
+		name = "Наша продукция никогда не была лучше!"
+		add_resource = {
+				type = rubber
+				amount = 20
+				state = 271
+			}
+	}
+}
+
+country_event = {
+	id = ethiopia.4004
+	title = "Залежи стали"
+	desc = "Найдено большое месторождение стали."
+	picture = GFX_report_event_generic_sign_treaty
+
+	trigger = {
+		ETH = { controls_state = 678 }
+	}	
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 60 }
+	
+	option = {
+		ai_chance = { base = 10 }
+		name = "Мы должны спешить с производством!"
+		add_resource = {
+				type = steel
+				amount = 8
+				state = 678
+			}
+	}
+}
+
+country_event = {
+	id = ethiopia.1007
+	title = "Претензии на Британские территории""
+	desc = "Британские Сомали, Абу-Даби и Аден, находятся под английским руководством слишком давно. Эти земли принадлежат нам по  праву!"
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = { base = 10 }
+		name = "Сформировать претензии на Британские Сомали, Абу-Даби и Аден"
+		ENG = { country_event = { id = britain.13371 days = 1 }} 
+	}
+}
+
+country_event = {
+	id = ethiopia.1009
+	title = "Претензии на Соломонское Королевство"
+	desc = "Королевство Соломона должно восстать из пепла, под просвященным правлением Хайле Селассие."
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = { base = 10 }
+		name = "Сформировать претензии на старые территории Соломонского Королевства"
+		ENG = { country_event = { id = britain.13372 days = 1 }} 
+	}
+}
+
+country_event = {
+	id = ethiopia.1008
+	title = "Претензии на Французские территории"
+	desc = "Французское Сомали находится под фрацузским руководством слишком давно. Эта земля принадлежат нам по  праву!"
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = { base = 10 }
+		name = "Сформировать претензии на Французское Сомали"
+		FRA = { country_event = { id = france.13371 days = 1 }} 
+	}
+}	
+
+country_event = {
+	id = ethiopia.1
+	title = "Каирское соглашение"
+	desc = "После колебаний государств-членов Лиги Наций, не признавать претензии Италии на эфиопскую землю, представители пяти великих держав, а также дипломаты из Эфиопии и Италии встретились в Каире и согласились прекратить военные действия с Италией, согласившись уступить контроль над Эритреей и Сомалилендом Эфиопии."
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { base = 1 }
+		name = "Надеюсь, этот мир будет продолжаться"
+		ITA = {white_peace = ETH}
+		ETH = { transfer_state = 550 }
+		ETH = { transfer_state = 559 }
+	}
+}
+
+
+country_event = {
+	id = ethiopia.1005
+	title = "Эвакуация Асмары"
+	desc = "После падения обороны Асмары, итальянские граждане были захвачена нами в городском порту. Теперь, когда город под нашим контролем, их судьба находится в наших руках."
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	fire_only_once = yes
+
+	trigger = {
+		ETH = { controls_state = 550 }
+		ITA = { exists = yes }
+		has_war_with = ITA
+	}
+	
+	mean_time_to_happen = {	days = 1 }
+	
+	option = {
+		#ai_chance = { base = 1 }
+		name = "Они все наши люди, интегрировать их землю в Эфиопию."
+		add_state_core = 559
+		add_national_unity = -0.05
+	}
+	option = {
+		#ai_chance = { base = 0 }
+		name = "Эти люди не настоящие Эфиопцы!"
+		add_national_unity = 0.05
+	}
+	
+}
+
+
+country_event = {
+	id = ethiopia.1006
+	title = "Эвакуация Могадишо"
+	desc = "После жестокого сопротивления, итальянские войска в Могадишо капитулировали. Осталось решить, что делать с проживающими там людьми."
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	fire_only_once = yes
+
+	trigger = {
+		ETH = { controls_state = 559 }
+		ITA = { exists = yes }
+		has_war_with = ITA
+	}
+	mean_time_to_happen = {	days = 1 }
+	option = {
+		#ai_chance = { base = 1 }
+		name = "Они все наши люди, интегрировать их землю в Эфиопию."
+		add_state_core = 550
+		add_national_unity = -0.05
+	}
+	option = {
+		#ai_chance = { base = 0 }
+		name = "Эти люди не настоящие Эфиопцы!"
+		add_national_unity = 0.05
+	}
+	
+	
+}
+
+
+
+country_event = {
+	id = ethiopia.1001
+	title = "Немецкое оружие"
+	desc = "Германия присылает своих советников и новейшее оборудование, чтобы помочь нашей промышленности. С таким новейшим вооружением, мы наконец сможешь дать решающий отпор диктатуре Муссолини."
+	picture = GFX_report_event_german_troops
+	
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = { base = 1 }
+		name = "Мы должны спешить с производством!"
+		add_resource = {
+				type = steel
+				amount = 16
+				state = 271
+			}
+		271 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+		}
+	}
+}
+
+country_event = {
+	id = ethiopia.10011
+	title = "Немецкое оружие"
+	desc = "Германия присылает своих советников и новейшее оборудование, чтобы помочь нашей промышленности. С таким новейшим вооружением, мы наконец сможешь дать решающий отпор диктатуре Муссолини."
+	picture = GFX_report_event_german_troops
+	
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = { base = 1 }
+		name = "Мы должны спешить с производством!"
+		ETH = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 16000
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ethiopia.1002
+	title = "Японская поддержка"
+	desc = "Япония и Эфиопия подписали Второе Соглашение о Дружбе и Торговле и уже прибыло японское снаряжение и оборудование, для военной и промышленной помощи Эфиопии."
+	picture = GFX_report_event_japanese_troops
+	
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = { base = 10 }
+		name = "Наши сталелитейные заводы активизируются!"
+		add_ideas = ETH_japan_advice
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 271
+			}
+	}
+}
+
+

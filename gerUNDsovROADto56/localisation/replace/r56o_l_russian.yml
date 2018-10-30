@@ -1,0 +1,138 @@
+﻿#####---------------------------------------------------------------------> Mod by Sig "GreatExperiment" Altre
+
+#--> Everything is in alphabetical according to their name, not the tag
+
+#--> I wonder how a pie feels about being eaten? Is it happy to fulfill its purpose, or blissfully unaware?
+
+l_russian:
+
+###------> *A <><> <><> <><> <><> <><>
+ custom_diff_strong_afg:0 "Усилить Афганистан"
+ custom_diff_strong_alb:0 "Усилить Албанию"
+ custom_diff_strong_arg:0 "Усилить Аргентину"
+ custom_diff_strong_ast:0 "Усилить Австралию"
+ custom_diff_strong_aus:0 "Усилить Австрию"
+ 
+###------> *B <><> <><> <><> <><> <><>
+ custom_diff_strong_bel:0 "Усилить Бельгию"
+ custom_diff_strong_bhu:0 "Усилить Бутан"
+ custom_diff_strong_bol:0 "Усилить Боливию"
+ custom_diff_strong_bra:0 "Усилить Бразилию"
+ custom_diff_strong_raj:0 "Усилить Индию"
+ custom_diff_strong_bul:0 "Усилить Болгарию"
+ 
+###------> *C <><> <><> <><> <><> <><>
+ custom_diff_strong_can:0 "Усилить Канаду"
+ custom_diff_strong_chl:0 "Усилить Чили"
+ custom_diff_strong_col:0 "Усилить Колумбию"
+ custom_diff_strong_cos:0 "Усилить Коста-Рику"
+ custom_diff_strong_cub:0 "Усилить Кубу"
+ custom_diff_strong_cze:0 "Усилить Чехословакию"
+ 
+###------> *D <><> <><> <><> <><> <><>
+ custom_diff_strong_den:0 "Усилить Данию"
+ custom_diff_strong_dom:0 "Усилить Доминиканскую Республику"
+ 
+###------> *E <><> <><> <><> <><> <><>
+ custom_diff_strong_ins:0 "Усилить Голландскую Ост-Индию"
+ custom_diff_strong_ecu:0 "Усилить Эквадор"
+ custom_diff_strong_els:0 "Усилить Сальвадор"
+ custom_diff_strong_est:0 "Усилить Эстонию"
+ custom_diff_strong_eth:0 "Усилить Эфиопию"
+ 
+###------> *F <><> <><> <><> <><> <><>
+ custom_diff_strong_fin:0 "Усилить Финляндию"
+ 
+###------> *G <><> <><> <><> <><> <><>
+ custom_diff_strong_gxc:0 "Усилить Гуансийскую Клику"
+ custom_diff_strong_gua:0 "Усилить Гватемалу"
+ custom_diff_strong_gre:0 "Усилить Грецию"
+ 
+###------> *H <><> <><> <><> <><> <><>
+ custom_diff_strong_hai:0 "Усилить Гаити"
+ custom_diff_strong_hon:0 "Усилить Гондурас"
+ custom_diff_strong_hun:0 "Усилить Венгрию"
+ 
+###------> *I <><> <><> <><> <><> <><>
+ custom_diff_strong_per:0 "Усилить Иран"
+ custom_diff_strong_irq:0 "Усилить Ирак"
+ custom_diff_strong_ire:0 "Усилить Ирландию"
+ 
+###------> *L <><> <><> <><> <><> <><>
+ custom_diff_strong_lat:0 "Усилить Латвию"
+ custom_diff_strong_lit:0 "Усилить Литву"
+ custom_diff_strong_lux:0 "Усилить Люксембург"
+
+ 
+###------> *M <><> <><> <><> <><> <><>
+ custom_diff_strong_man:0 "Усилить Маньчжурию"
+ custom_diff_strong_men:0 "Усилить Менцзян"
+ custom_diff_strong_mex:0 "Усилить Мексику"
+ custom_diff_strong_mon:0 "Усилить Монголию"
+ 
+###------> *N <><> <><> <><> <><> <><>
+ custom_diff_strong_nep:0 "Усилить Непал"
+ custom_diff_strong_nzl:0 "Усилить Новую Зеландию"
+ custom_diff_strong_hol:0 "Усилить Нидерланды"
+ custom_diff_strong_nic:0 "Усилить Никарагуа"
+ custom_diff_strong_nor:0 "Усилить Норвегию"
+ 
+###------> *O <><> <><> <><> <><> <><>
+ custom_diff_strong_oma:0 "Усилить Оман"
+ 
+###------> *P <><> <><> <><> <><> <><>
+ custom_diff_strong_pan:0 "Усилить Панаму"
+ custom_diff_strong_par:0 "Усилить Парагвай"
+ custom_diff_strong_pru:0 "Усилить Перу"
+ custom_diff_strong_phi:0 "Усилить Филлипины"
+ custom_diff_strong_pol:0 "Усилить Польшу"
+ custom_diff_strong_por:0 "Усилить Португалию"
+ custom_diff_strong_prc:0 "Усилить КНР"
+ 
+###------> *R <><> <><> <><> <><> <><>
+ custom_diff_strong_rom:0 "Усилить Румынию"
+ 
+###------> *S <><> <><> <><> <><> <><> 
+ custom_diff_strong_sau:0 "Усилить Саудовскую Аравию"
+ custom_diff_strong_shx:0 "Усилить Шаньси"
+ custom_diff_strong_sia:0 "Усилить Сиам"
+ custom_diff_strong_sik:0 "Усилить Синцзянь"
+ custom_diff_strong_saf:0 "Усилить Южную Африку"
+ custom_diff_strong_spr:0 "Усилить Испанию"
+ custom_diff_strong_swe:0 "Усилить Швецию"
+ custom_diff_strong_swi:0 "Усилить Швейцарию"
+ 
+###------> *T <><> <><> <><> <><> <><>
+ custom_diff_strong_tan:0 "Усилить Танну-Туву"
+ custom_diff_strong_tib:0 "Усилить Тибет"
+ custom_diff_strong_tur:0 "Усилить Турцию"
+ 
+###------> *U <><> <><> <><> <><> <><>
+ custom_diff_strong_urg:0 "Усилить Уругвай"
+ 
+###------> *V <><> <><> <><> <><> <><>
+ custom_diff_strong_ven:0 "Усилить Венесуэлу"
+ 
+###------> *Y <><> <><> <><> <><> <><>
+ custom_diff_strong_yem:0 "Усилить Йемен"
+ custom_diff_strong_yug:0 "Усилить Югославию"
+ custom_diff_strong_yun:0 "Усилить Юньань"
+ 
+###------> *Factions <><> <><> <><> <><> <><>
+ custom_diff_strong_allies:0 "Усилить Союзников"
+ custom_diff_strong_axis:0 "Усилить Ось"
+ 
+###------> *Regions <><> <><> <><> <><> <><>
+ custom_diff_strong_africa:0 "Усилить Африку"
+ custom_diff_strong_america_central:0 "Усилить Центральную америку"
+ custom_diff_strong_america_north:0 "Усилить Северную Америку"
+ custom_diff_strong_america_south:0 "Усилить Южную Америку"
+ custom_diff_strong_middle_east:0 "Усилить Средний Восток"
+ custom_diff_strong_europe_central:0 "Усилить Центральную Европу"
+ custom_diff_strong_europe_east:0 "Усилить Восточную Европу"
+ custom_diff_strong_europe_north:0 "Усилить Северную Европу"
+ custom_diff_strong_europe_west:0 "Усилить Западную Европу"
+ custom_diff_strong_asia_east:0 "Усилить Восточную Азию"
+ custom_diff_strong_asia_central: "Усилить Центральную Азию"
+ 
+#####---------------------------------------------------------------------> End
