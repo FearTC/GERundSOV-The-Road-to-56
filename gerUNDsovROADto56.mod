@@ -1,4 +1,4 @@
-name="GERundSOV Road to 56 Submod"
+name="GERundSOV"
 path="mod/gerUNDsovROADto56"
 tags={
 	"Technologies"
