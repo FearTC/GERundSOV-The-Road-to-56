@@ -1,4 +1,4 @@
-name="GERundSOV"
+name="GERundSOV v8.1"
 path="mod/gerUNDsovROADto56"
 tags={
 	"Technologies"
